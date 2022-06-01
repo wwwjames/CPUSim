@@ -1,0 +1,129 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>edu.cs.wpi</groupId>
+  <artifactId>cpusim</artifactId>
+  <version>4.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>CodeExamples</name>
+
+  <properties>
+    <scm.repository.url>git@github.com:wwwjames/CPUSim.git</scm.repository.url>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <!-- dependency versions -->
+    <reactfx.version>2.0-M4</reactfx.version>
+    <fxmisc-undo.version>1.1.1</fxmisc-undo.version>
+    <fxmisc-richtext.version>0.6.9</fxmisc-richtext.version>
+    <guava.version>19.0</guava.version>
+    <junit.version>4.13.2</junit.version>
+
+    <!-- plugin and extension versions -->
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>     
+    <maven-source-plugin.version>3.2.1</maven-source-plugin.version>     
+    <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>  
+    <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
+    
+  </properties>
+
+  <scm>
+    <connection>scm:git:${scm.repository.url}</connection>
+    <url>${scm.repository.url}</url>
+  </scm>
+
+   <dependencies>
+
+          <dependency>
+               <groupId>org.reactfx</groupId>
+               <artifactId>reactfx</artifactId>
+               <version>${reactfx.version}</version>
+          </dependency>
+
+          <dependency>
+               <groupId>org.fxmisc.undo</groupId>
+               <artifactId>undofx</artifactId>
+               <version>${fxmisc-undo.version}</version>
+          </dependency>
+          <dependency>
+               <groupId>org.fxmisc.richtext</groupId>
+               <artifactId>richtextfx</artifactId>
+               <version>${fxmisc-richtext.version}</version>
+          </dependency>
+
+          <dependency>
+               <groupId>com.google.guava</groupId>
+               <artifactId>guava</artifactId>
+               <version>${guava.version}</version>
+          </dependency>
+
+          <dependency>
+             <groupId>junit</groupId>
+             <artifactId>junit</artifactId>
+             <version>${junit.version}</version>
+             <scope>test</scope>
+           </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+
+       <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <configuration>
+            <optimize>true</optimize>
+            <debug>true</debug>
+            <showDeprecation>true</showDeprecation>
+            <showWarnings>true</showWarnings>
+          </configuration>
+      </plugin>
+
+      <plugin>
+         <artifactId>maven-source-plugin</artifactId>
+         <version>${maven-source-plugin.version}</version>
+         <executions>
+           <execution>
+             <id>attach-sources</id>
+             <phase>validate</phase>
+             <goals>
+                <goal>jar-no-fork</goal>
+             </goals> 
+           </execution>
+         </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven-javadoc-plugin.version}</version>
+        <configuration>
+          <doclint>none</doclint>
+          <failOnError>false</failOnError>
+        </configuration>
+
+        <executions> 
+         <execution> 
+            <id>attach-javadocs</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals> 
+         </execution> 
+       </executions> 
+      </plugin>
+
+       <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+         <version>${maven-surefire-plugin.version}</version>
+       </plugin>
+
+    </plugins>
+
+  </build>
+</project>
