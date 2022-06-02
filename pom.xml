@@ -16,10 +16,12 @@
           <maven.compiler.target>1.8</maven.compiler.target>
 
           <!-- dependency versions -->
-          <reactfx.version>2.0-M4</reactfx.version>
-          <fxmisc-undo.version>1.1.1</fxmisc-undo.version>
-          <fxmisc-richtext.version>0.6.9</fxmisc-richtext.version>
+          <flowless.version>0.4.5</flowless.version>
+          <fxmisc-richtext.version>0.6.10</fxmisc-richtext.version>
+          <fxmisc-undo.version>1.2</fxmisc-undo.version>
           <guava.version>19.0</guava.version>
+          <reactfx.version>2.0-M4</reactfx.version>
+          <wellbehavedfx.version>0.1.1</wellbehavedfx.version>
           <junit.version>4.13.2</junit.version>
 
           <!-- plugin and extension versions -->
@@ -38,9 +40,15 @@
      <dependencies>
 
           <dependency>
-               <groupId>org.reactfx</groupId>
-               <artifactId>reactfx</artifactId>
-               <version>${reactfx.version}</version>
+               <groupId>org.fxmisc.flowless</groupId>
+               <artifactId>flowless</artifactId>
+               <version>${flowless.version}</version>
+          </dependency>
+
+          <dependency>
+               <groupId>org.fxmisc.richtext</groupId>
+               <artifactId>richtextfx</artifactId>
+               <version>${fxmisc-richtext.version}</version>
           </dependency>
 
           <dependency>
@@ -48,10 +56,17 @@
                <artifactId>undofx</artifactId>
                <version>${fxmisc-undo.version}</version>
           </dependency>
+
           <dependency>
-               <groupId>org.fxmisc.richtext</groupId>
-               <artifactId>richtextfx</artifactId>
-               <version>${fxmisc-richtext.version}</version>
+               <groupId>org.fxmisc.wellbehaved</groupId>
+               <artifactId>WellBehavedFX</artifactId>
+               <version>${wellbehavedfx.version}</version>
+          </dependency>
+
+          <dependency>
+               <groupId>org.reactfx</groupId>
+               <artifactId>reactfx</artifactId>
+               <version>${reactfx.version}</version>
           </dependency>
 
           <dependency>

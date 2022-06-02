@@ -1,6 +1,14 @@
 # CPUSim
+     
+## Preface
+
+This [wwwjames/CPUSim](https://github.com/wwwjames/CPUSim) is fork of [Colby-CPU-Sim](https://github.com/Colby-CPU-Sim/CPUSim.git), 
+and is transitioning from gradle to maven due to the use of no longer available or maintained gradle plugins for JavaFX, and
+the use of this for experimental purposes, and the removal of IntelliJ project files as part of the repo other than 
+the runtime configurations added to `artifacts/IntelliJ/runConfigurations`.
 
 ## Introduction
+
 CPU Sim is a Java application that allows users to design simple computer CPUs at the microcode level and to run 
 machine-language or assembly-language programs on those CPUs through simulation. It can be used to simulate a variety 
 of architectures, including accumulator-based, RISC-like, or stack-based (such as the JVM) architectures. It is a useful 
