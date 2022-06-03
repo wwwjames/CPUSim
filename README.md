@@ -7,6 +7,11 @@ and is transitioning from gradle to maven due to the use of no longer available 
 the use of this for experimental purposes, and the removal of IntelliJ project files as part of the repo other than 
 the runtime configurations added to `artifacts/IntelliJ/runConfigurations`.
 
+### Pre-requisites
+
+- Maven 3
+- JDK 8 with JavaFX
+
 ## Introduction
 
 CPU Sim is a Java application that allows users to design simple computer CPUs at the microcode level and to run 

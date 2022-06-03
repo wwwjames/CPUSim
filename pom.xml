@@ -7,7 +7,7 @@
      <version>4.1-SNAPSHOT</version>
      <packaging>jar</packaging>
 
-     <name>CPUSim</name>
+     <name>cpusim</name>
 
      <properties>
           <scm.repository.url>git@github.com:wwwjames/CPUSim.git</scm.repository.url>
