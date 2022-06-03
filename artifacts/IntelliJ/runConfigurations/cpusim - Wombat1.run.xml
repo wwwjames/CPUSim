@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="cpusim - Wombat1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="cpusim.Main" />
+    <module name="cpusim" />
+    <option name="PROGRAM_PARAMETERS" value="-m artifacts/SampleAssignments/Wombat1.cpu -t artifacts/SampleAssignments/W1-0.a" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
